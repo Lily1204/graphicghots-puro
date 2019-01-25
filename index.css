@@ -10,14 +10,14 @@ body {
 }
 
 .navbar {
-    width: 100%;
-    /* position:fixed; */
-    background-color: white;
+  width: 100%;
+  background-color: white;
 }
-  .logo {
-    max-height: 80px;
-    padding: 0 10%;
-  }
+
+.logo {
+  max-height: 80px;
+  padding: 0 10%;
+}
 
 .navigation {
   list-style: none;
@@ -30,13 +30,12 @@ body {
   -webkit-flex-flow: row wrap;
 }
 
-.navigation img{
-    justify-content: flex start;
+.navigation img {
+  justify-content: flex start;
 }
 
 .navigation a {
   text-decoration: none;
-  /* display: block; */
   padding: 1.3em;
   color: black;
 }
@@ -56,13 +55,13 @@ body {
   background-image: url("./images/image1.png");
 }
 
-
 .content {
   margin: auto;
   max-width: 250px;
   width: 50%;
   margin-top: 200px;
 }
+
 .content-info_text {
   margin: auto;
   width: 70%;
@@ -135,7 +134,7 @@ body {
 /****************************** section3 *****************************/
 .section3 {
   margin: 0px;
-  background-color:  rgb(83, 83, 105);
+  background-color: rgb(83, 83, 105);
 }
 
 .section3-info {
@@ -296,9 +295,10 @@ body {
 }
 
 /***************************** footer ******************************/
-.footer{
+.footer {
   background-color: rgb(83, 83, 105);
 }
+
 .footer-info {
   background-color: rgb(83, 83, 105);
   height: 250px;
@@ -322,6 +322,7 @@ body {
 .container2 {
   background-color: #4CAF50;
 }
+
 .navigation2 {
   list-style: none;
   margin: 0;
@@ -332,6 +333,7 @@ body {
   display: flex;
   -webkit-flex-flow: row wrap;
 }
+
 .navigation2 a {
   text-decoration: none;
   /* display: block; */
