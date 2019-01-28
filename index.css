@@ -77,13 +77,6 @@ html {
   background-size: cover;
   background-image: url("./images/image1.png");
 }
-/* .img{
-	width: 200px;
-	height: 200px;
-	object-fit: none;
-	background-color: black;
-	border: 3px solid #ff9daa;
-} */
 
 .img2 {
   width: 800px;
