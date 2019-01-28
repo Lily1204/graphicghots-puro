@@ -2,48 +2,71 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-body {
+body,
+html {
   width: 100%;
   background-color: white;
+  font-family: 'Montserrat';
 }
 
-.navbar {
-  width: 100%;
+
+.Navbar {
   background-color: white;
-}
-
-.logo {
-  max-height: 80px;
-  padding: 0 10%;
-}
-
-.navigation {
-  list-style: none;
-  margin: 0;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-}
-
-.navigation img {
-  justify-content: flex start;
-}
-
-.navigation a {
-  text-decoration: none;
-  padding: 1.3em;
+  padding: 30px;
   color: black;
+}
+
+.Navbar__Link {
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+.Navbar__Items {
+  display: flex;
+}
+
+.Navbar__Items--right {
+  margin-left: auto;
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+
+  .Navbar__Items {
+    display: none;
+  }
+
+  .Navbar__Items--right {
+    margin-left: 0;
+  }
+
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
 }
 
 
 /***************************************** section1 **************************/
 .section1 {
-
   background-color: rgb(83, 83, 105)
 }
 
@@ -52,6 +75,22 @@ body {
   height: 800px;
   background-position: center center;
   background-size: cover;
+  background-image: url("./images/image1.png");
+}
+/* .img{
+	width: 200px;
+	height: 200px;
+	object-fit: none;
+	background-color: black;
+	border: 3px solid #ff9daa;
+} */
+
+.img2 {
+  width: 800px;
+  height: 800px;
+  background-position: center center;
+  background-size: cover;
+  object-fit: none;
   background-image: url("./images/image1.png");
 }
 
@@ -97,12 +136,18 @@ body {
 .section2 {
   background-color: white;
   margin: 0 auto;
+  padding: 10px;
 
 }
 
+.container-card {
+  margin: 30px;
+  padding: 30px;
+}
+
 .title-container {
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
+  padding: 20px;
   text-align: center;
 
 }
@@ -123,18 +168,28 @@ body {
 .sections-info {
   margin: 20px;
   padding: 15px;
-
 }
 
 .sections-info img {
   width: 50px;
   height: 50px;
+
+}
+
+.text {
+  margin-right: 20px;
+  margin-left: 20px;
+  max-width: 400px;
 }
 
 /****************************** section3 *****************************/
 .section3 {
   margin: 0px;
   background-color: rgb(83, 83, 105);
+}
+
+.description {
+  color: white;
 }
 
 .section3-info {
@@ -163,9 +218,15 @@ body {
 }
 
 /**************************** section4 ********************************/
-.items {
+.section4 {
   margin: 20px;
   padding: 30px;
+  align-items: center;
+}
+
+.items {
+  margin: 20px;
+  padding: 10px;
   list-style: none;
   margin: 0;
   display: -webkit-box;
@@ -175,6 +236,7 @@ body {
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  font-weight: bold;
 }
 
 .card-info {
@@ -186,16 +248,18 @@ body {
 .image-conainer {
   height: 200px;
   margin: 10px;
-  max-width: 200px;
+  /* max-width: 200px; */
   background-color: rgb(83, 83, 105);
 }
 
 .text-container {
-  max-width: 200px;
+  max-width: 400px;
 }
 
 /******************************* section5 ***************************/
 .section5 {
+
+  padding: 10px;
   background-color: rgb(83, 83, 105);
 }
 
@@ -214,11 +278,13 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
   font-size: 14px;
   margin: 10px 10px;
   cursor: pointer;
   width: 150px;
   height: 40px;
+  border: 2px solid black;
 
 }
 
@@ -228,14 +294,15 @@ body {
 }
 
 .card-section6 {
-  width: 120px;
-  height: 100px;
+  width: 200px;
+  height: 130px;
   background-color: rgb(83, 83, 105);
 }
 
 .container-text {
   margin-right: 20px;
   margin-left: 20px;
+  max-width: 400px;
 }
 
 /****************************** section7 ****************************/
@@ -247,51 +314,113 @@ body {
   height: 40px;
   width: 250px;
   background-color: white;
-  display: inline-block;
+  /* display: inline-block; */
   border-radius: 5px;
 }
 
 /***************************** section 8 *****************************/
-.lds-ring {
-  display: inline-block;
+
+.spinner {
+  widows: 100%;
+  background-color: #4CAF50;
+}
+
+.foot-image {
+
+  padding: 20px;
+}
+
+.chart {
   position: relative;
-  width: 64px;
-  height: 64px;
+  display: inline-block;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
 }
 
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
+.chart figcaption {
+  padding: 50px 25px;
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  line-height: 50px;
+}
+
+.chart svg {
   position: absolute;
-  width: 51px;
-  height: 51px;
-  margin: 6px;
-  border: 6px solid #cef;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #cef transparent transparent transparent;
+  top: -5px;
+  left: -15px;
 }
 
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
+.outer {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 5;
+  stroke-dasharray: 534;
 }
 
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 67;
+  animation: show75 3s;
 }
 
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
+.chart[data-percent='85'] .outer {
+  stroke-dashoffset: 100;
+  animation: show75 3s;
 }
 
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
+.chart[data-percent='90'] .outer {
+  stroke-dashoffset: 130;
+  animation: show75 3s;
+}
+
+.chart[data-percent='95'] .outer {
+  stroke-dashoffset: 180;
+  animation: show75 3s;
+}
+
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 534;
   }
 
-  100% {
-    transform: rotate(360deg);
+  to {
+    stroke-dashoffset: ;
   }
+}
+
+@keyframes show85 {
+  from {
+    stroke-dashoffset: 500;
+  }
+
+  to {
+    stroke-dashoffset: ;
+  }
+}
+
+.icon {
+  color: white;
+}
+
+.icon1 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 100px;
+  color: white;
+}
+
+.icon2 {
+  width: 400px;
+  margin: 0 auto;
+  color: white;
+
 }
 
 /***************************** footer ******************************/
@@ -301,12 +430,12 @@ body {
 
 .footer-info {
   background-color: rgb(83, 83, 105);
-  height: 250px;
+  height: 300px;
 }
 
 .footer-info2 {
   background-color: rgb(62, 62, 75);
-  height: 250px;
+  height: 300px;
 }
 
 .contact {
@@ -341,11 +470,53 @@ body {
   color: white;
 }
 
-@media all and (max-width: 600px) {
-  .navigation a {
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.circle img {
+  width: 50px;
+}
+
+
+@media all and (max-width: 670px) {
+  .card-section6 {
+    width: 320px;
+    height: 200px;
+
+  }
+
+  .sections-info {
+    max-width: 600px;
+  }
+
+  .text {
+    max-width: 200px;
+  }
+
+}
+
+@media all and (max-width: 570px) {
+
+  .navigation2 a {
+    display: none;
+  }
+}
+
+@media all and (max-width: 766px) {
+  .img2 {
+    display: none;
+  }
+}
+
+@media all and (min-width: 767px) {
+  .img {
+    background: none;
+  }
+
+  .img2 {
+    display: block;
+    position: relative;
+  }
+
+  .content {
+    max-width: 800px;
+    width: 80%;
   }
 }
